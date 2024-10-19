@@ -4,7 +4,7 @@
   "main": "react.js",
   "scripts": {
     "start": "parcel React.html",
-    "build": "parcel build React.html",
+    "build": "parcel build React.html", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
