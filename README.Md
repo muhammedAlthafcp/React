@@ -21,5 +21,21 @@
 - Different dev and prod bundles
 
 
+# Two type of export/import
+
+- Default Export/Import
+
+exprot default component
+improt componenet form"path"
+
+- Named Export/Improt
+
+exprot const component;
+import {component} form "path"
+
+# React Hooks
+(Normal js utility function)
+- useState() - suprePowerful state variables in recat
+-useEffect() 
 
 
