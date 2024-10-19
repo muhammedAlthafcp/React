@@ -3,7 +3,7 @@ node_modules/
 
 # Ignore .parcel-cache directory
 .parcel-cache/
-.dist/
+ dist/
 
 
 
