@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 const Body = () => {
   const [restaurantDatas, setRestaurantDatas] = useState(restaurantData); // Initialize state with restaurantData
-
   return (
     <div className="body">
       <div className="filter">
