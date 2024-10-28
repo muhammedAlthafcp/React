@@ -9,4 +9,5 @@ const RestaurantCart = ({ resData }) => {
       </div>
     );
   };
+  
 export default rest
