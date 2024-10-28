@@ -10,4 +10,4 @@ const RestaurantCart = ({ resData }) => {
     );
   };
 
-export default RestaurantCart
+export default rest
