@@ -3,7 +3,7 @@ import RestaurantCard from "./RestaurantCart";
 import { useState } from "react";
 
 const Body = () => {
-  // Initialize state with the imported restaurant data
+
   const [restaurants, setRestaurants] = useState(restaurantData);
   return (
     <main className="home-container">
