@@ -1,4 +1,4 @@
-const restaurantData = [
+const restaurant = [
     {
       id: 1,
       name: "Maghana Foods",
@@ -6,8 +6,7 @@ const restaurantData = [
       rating: 4.5,
       location: "Mumbai, India",
       priceRange: "$$",
-      image:
-        "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500",
+      image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500",
     },
     {
       id: 2,
@@ -51,15 +50,6 @@ const restaurantData = [
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8lcOlhmLvxqbYJNkdKBl7nDCz7pnLYHnRCMmMJJPc80F_d-cALWK2RHFGFIPTyxxD52s&usqp=CAU",
     },
-    {
-      id: 8,
-      name: "Curry House",
-      cuisine: "Indian",
-      rating: 4.5,
-      location: "Delhi, India",
-      priceRange: "$$",
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHu2voBtc8SS03X6nhQ8B22wespJaNMuWriA&s"
-       
-    }
+   
   ];
-  export default restaurantData;
+  export default restaurant;

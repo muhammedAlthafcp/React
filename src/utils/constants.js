@@ -1,1 +1,1 @@
-export const URL_LOGO = 'https://img.freepik.com/premium-vector/online-food-app-icon-food-shop-location-logo-also-online-resturent-location-template_608547-155.jpg?w=360'
+export const URL_LOGO = 'https://miro.medium.com/v2/resize:fit:1000/1*fpW1jv595xjp0G1LiaLEjQ.jpeg'
