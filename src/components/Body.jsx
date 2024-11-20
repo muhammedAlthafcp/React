@@ -1,4 +1,4 @@
-import restaurantData from "../utils/mockData"; // Import the restaurant data
+import restaurantData from "../utils/mockData"; 
 import RestaurantCard from "./RestaurantCart";
 import { useState } from "react";
 
