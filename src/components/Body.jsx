@@ -1,34 +1,38 @@
-import restaurant from "../utils/mockData";
+import restaurantData from "../utils/mockData"; // Import the restaurant data
 import RestaurantCard from "./RestaurantCart";
-import { useState } from "react"; 
-
-
+import { useState } from "react";
 
 const Body = () => {
-  const [restaurant,setrestaurant] = useState([restaurant])
+  // Initialize state with the imported restaurant data
+  const [restaurants, setRestaurants] = useState(restaurantData);
   return (
     <main className="home-container">
       <div className="search-container">
-        <input type="text" placeholder="Search Restaurants..." className="search-bar" />
-      </div> 
-      <div>
-        <button className="Top-resto" onClick={()=>{
-        const Toprestaurant=restaurant.filter((res)=> res.rating>3)
-         console.log(restaurant);
-         setrestaurant(Toprestaurant)
-         
-          
-        }}>Top restaurant</button>
+        <input
+          type="text"
+          placeholder="Search Restaurants..."
+          className="search-bar"
+        />
       </div>
-      <div className="res-container"> 
+      <div>
+        <button
+          className="Top-resto"
+          onClick={() => {
+            const topRestaurants = restaurants.filter((res) => res.rating > 4.5);
+            setRestaurants(topRestaurants); // Update state with filtered data
+          }}
+        >
+          Top Restaurants
+        </button>
+      </div>
+      <div className="res-container">
         {/* Render multiple restaurant cards */}
-        {restaurant.map((res, index) => (
+        {restaurants.map((res, index) => (
           <RestaurantCard key={index} restaurant={res} />
         ))}
       </div>
     </main>
   );
 };
- 
 
-export default Body
+export default Body;
