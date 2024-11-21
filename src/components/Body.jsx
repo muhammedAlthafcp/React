@@ -1,11 +1,22 @@
 import restaurantData from "../utils/mockData"; 
 import RestaurantCard from "./RestaurantCart";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import ShimmerCard from "./shimmer";
 
 const Body = () => {
 
   const [restaurants, setRestaurants] = useState(restaurantData);
-  return (
+
+  useEffect(()=>{
+    // fetchData()
+    
+  },[])
+  // const  fetchData=(()=>{
+  //   const Data = fetch("https://github.com/muhammedAlthafcp")
+
+  // })
+
+  return restaurants.length === 0 ? <ShimmerCard/> : (
     <main className="home-container">
       <div className="search-container">
         <input
