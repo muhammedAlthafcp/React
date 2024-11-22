@@ -6,6 +6,7 @@ import ShimmerCard from "./shimmer";
 const Body = () => {
 
   const [restaurants, setRestaurants] = useState(restaurantData);
+  const [searchText,setsearchText] = useState("")
 
   useEffect(()=>{
     // fetchData()
@@ -22,9 +23,21 @@ const Body = () => {
         <input
           type="text"
           placeholder="Search Restaurants..."
-          className="search-bar"
+        className="search-bar"
+        value={searchText}onChange={(e)=>{
+             setsearchText(e.target.value)
+        }}
         />
-      </div>
+        <button className="search-btn" onClick={()=>{
+          const hello = restaurants.filter((res)=>{
+            console.log(res);
+            
+            res.name.toLowerCase().includes(searchText.toLowerCase())
+            console.log(hello);
+            
+          })
+        }}>search</button>
+      </div> 
       <div>
         <button
           className="Top-resto"

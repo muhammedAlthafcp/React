@@ -156,3 +156,19 @@ body {
 }
   
 /* shimmer */
+
+.search-btn {
+  width: 100px;
+  height: 39px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #ccc;
+  margin-left: 2px;
+  font-size: 16px;
+
+}
+.search-btn:hover{
+  background-color: red;
+  font-weight: bold;
+
+}

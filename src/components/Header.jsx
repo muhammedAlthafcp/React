@@ -20,7 +20,12 @@ const Header = () => {
           <li><a href="#">Contact</a></li>
           <li><a href="#">Cart</a></li>
           <button className="Login" onClick={()=>{
-            SetloginReact("logout") 
+            if(loignReact === "login"){
+              SetloginReact("logout") 
+            }else if(loignReact=== "logout"){
+              SetloginReact("login")
+            }
+          
           }}>{loignReact}</button>
         </ul>
       </nav>
