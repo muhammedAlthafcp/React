@@ -30,10 +30,10 @@ const Body = () => {
         />
         <button className="search-btn" onClick={()=>{
           const hello = restaurants.filter((res)=>{
-            console.log(res);
+     
             
             res.name.toLowerCase().includes(searchText.toLowerCase())
-            console.log(hello);
+          
             
           })
         }}>search</button>
