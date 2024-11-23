@@ -7,7 +7,6 @@ import About from "./components/About";
 
 // import { HydratedRouter, RouterProvider } from "react-router-dom";
 
-
 const AppLayout = () => {
   return (
     <div className="app">
