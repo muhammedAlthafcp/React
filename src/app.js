@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import About from "./components/About";
 
-import { HydratedRouter, RouterProvider } from "react-router-dom";
+// import { HydratedRouter, RouterProvider } from "react-router-dom";
 
 
 const AppLayout = () => {
