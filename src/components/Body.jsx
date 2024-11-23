@@ -1,56 +1,56 @@
-import restaurantData from "../utils/mockData"; 
+import restaurantData from "../utils/mockData";
 import RestaurantCard from "./RestaurantCart";
-import { useState,useEffect } from "react";
-import ShimmerCard from "./shimmer";
+import { useState, useEffect } from "react";
+import ShimmerCard from "./Shimmer";
 
 const Body = () => {
+  const [restaurants, setRestaurants] = useState(restaurantData); // State for restaurant data
+  const [searchText, setSearchText] = useState(""); // State for search input
 
-  const [restaurants, setRestaurants] = useState(restaurantData);
-  const [searchText,setsearchText] = useState("")
+  useEffect(() => {
+    // Fetch restaurant data from an API or database here
+    // For now, we're using mockData
+  }, []);
 
-  useEffect(()=>{
-    // fetchData()
-    
-  },[])
-  // const  fetchData=(()=>{
-  //   const Data = fetch("https://github.com/muhammedAlthafcp")
+  const handleSearch = () => {
+    const filteredRestaurants = restaurantData.filter((res) =>
+      res.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setRestaurants(filteredRestaurants); // Update state with filtered data
+  };
 
-  // })
+  const handleTopRestaurants = () => {
+    const topRestaurants = restaurantData.filter((res) => res.rating > 4.5);
+    setRestaurants(topRestaurants); // Update state with filtered data
+  };
 
-  return restaurants.length === 0 ? <ShimmerCard/> : (
+  return restaurants.length === 0 ? (
+    <ShimmerCard />
+  ) : (
     <main className="home-container">
+      {/* Search Bar */}
       <div className="search-container">
         <input
           type="text"
           placeholder="Search Restaurants..."
-        className="search-bar"
-        value={searchText}onChange={(e)=>{
-             setsearchText(e.target.value)
-        }}
+          className="search-bar"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
         />
-        <button className="search-btn" onClick={()=>{
-          const hello = restaurants.filter((res)=>{
-     
-            
-            res.name.toLowerCase().includes(searchText.toLowerCase())
-          
-            
-          })
-        }}>search</button>
-      </div> 
+        <button className="search-btn" onClick={handleSearch}>
+          Search
+        </button>
+      </div>
+
+      {/* Top Restaurants Button */}
       <div>
-        <button
-          className="Top-resto"
-          onClick={() => {
-            const topRestaurants = restaurants.filter((res) => res.rating > 4.5);
-            setRestaurants(topRestaurants); // Update state with filtered data
-          }}
-        >
+        <button className="Top-resto" onClick={handleTopRestaurants}>
           Top Restaurants
         </button>
       </div>
+
+      {/* Restaurant Cards */}
       <div className="res-container">
-        {/* Render multiple restaurant cards */}
         {restaurants.map((res, index) => (
           <RestaurantCard key={index} restaurant={res} />
         ))}
