@@ -13,16 +13,16 @@ const AppLayout = () => {
     </div>
   );
 };
-// const BrowserRouter = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <AppLayout />,
-//   },
-//   {
-//     path: "/About",
-//     element: <About />,
-//   }
-// ])
+const BrowserRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+  },
+  {
+    path: "/About",
+    element: <About />,
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<AppLayout />);
