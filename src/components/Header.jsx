@@ -1,9 +1,14 @@
 import { URL_LOGO } from "../utils/constants";
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 
 
 const Header = () => {
   const [loignReact,SetloginReact] = useState("login")
+
+  useEffect(()=>{
+    console.log("hellp");
+    
+  })
   return (
     <header className="header">
       <div className="logo-container">
