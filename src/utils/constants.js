@@ -1,1 +1,0 @@
-export const URL_LOGO = 'https://miro.medium.com/v2/resize:fit:1000/1*fpW1jv595xjp0G1LiaLEjQ.jpeg'
